@@ -25,6 +25,21 @@ Which brings us to the awesome part: creating a python version of the design so 
 type this code snippet via the terminal: `pyuic5 -x <name of file>.ui <name of file>.py`
 _this assumes the terminal is pointing to the exact location of the file otherwise provide the paths as needed._
 
+### Learning insights:
+
+- It seems as if PyQt can be understood as 2 major parts: 
+    1. Placing elements within a window and defining their attributes 
+    2. Attaching actions that are triggered when the elements are interacted with.
+
+In order words, I create sources of signals ie elements, and then i define what should happen when a signal is triggered or an event occurs, ie functions that handle the events.
+
+- On one hand, I cannot know all the elements and their attributes but I can focus on learning these patterns:
+    1. How to setup the basic window, including the most basic characteristics
+    2. How to create an element
+    3. How to define a events for the element
+    4. How to create functions that responds to an event on the element.
+=======
+
 ### Sources:
 
 - Setup and basic GUI app: [TechWithTim](https://www.youtube.com/watch?v=Vde5SH8e1OQ&ab_channel=TechWithTim)
