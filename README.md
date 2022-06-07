@@ -22,7 +22,7 @@ The drag and drop tool is really cool to use. After a quick design you can save 
 
 Which brings us to the awesome part: creating a python version of the design so you can edit as you see fit.
 
-type this code snippet via the terminal: `pyuic5 -x <name of file>.ui <name of file>.py`
+type this code snippet via the terminal: `pyuic5 -x <name of file>.ui -o <name of file>.py`
 _this assumes the terminal is pointing to the exact location of the file otherwise provide the paths as needed._
 
 ### Learning insights:
