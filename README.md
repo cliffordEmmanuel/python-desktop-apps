@@ -41,6 +41,30 @@ On one hand, I cannot know all the elements and their attributes but I can focus
 3. How to define a events for the element
 4. How to create functions that responds to an event on the element.
 
+## Making a linux python installer for the PyQt app
+
+[Pyinstaller](https://pyinstaller.org/en/stable/) is according to the docs the library used to bundle a Python application and its dependencies into a single package.
+
+The following steps outlines how to make a linux installer out of the pyqt application:
+
+- Step 1: install PyInstaller
+  `pip3 install PyInstaller preferably into a virtual environment`
+- Step 2: building the app
+  `pyinstaller app.py`
+  - make sure you navigate to the folder where the application exists.
+  The result of this is you'll have 2 folders created: **dist** and **build**.
+
+  - The _build_ folder is used by pyinstaller to collect and prepare the files for bundling. You can  largely ignore this unless you're trying to debug)
+
+  - The _dist_ folder contains the files to be distributed, includes your application bundled as an executable file, together with the libraries and binary .so files.
+  
+  - Also created is a **.spec** file.
+  This spec file contains the build configuration and instructions used by PyInstaller to package the application. It is generated the first time pyinstaller command is ran for the application script.
+  
+- Step: Tweaking your build:
+
+  To rebuild your application you only need to pass the corresponding .spec file to the pysintaller command: `pyinstaller app.spec`
+
 ## Sources
 
 - Setup and basic GUI app: [TechWithTim](https://www.youtube.com/watch?v=Vde5SH8e1OQ&ab_channel=TechWithTim)
