@@ -133,9 +133,11 @@ class Ui_ComboBoxTutorial(object):
 
 
 if __name__ == "__main__":
-    import sys
+    import sys, os
 
+    basedir = os.path.dirname(__file__)
     app = QtWidgets.QApplication(sys.argv)
+    app.setWindowIcon(QtGui.QIcon(os.path.join(basedir, "images/direction.png")))
     ComboBoxTutorial = QtWidgets.QMainWindow()
     ui = Ui_ComboBoxTutorial()
     ui.setupUi(ComboBoxTutorial)
